@@ -15,6 +15,4 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require ckeditor/init
-//= require easy-emoji
-//= require emoji-turbolinks
 //= require_tree .
