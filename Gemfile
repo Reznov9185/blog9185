@@ -35,6 +35,7 @@ gem 'paperclip'
 # Device for user auth
 gem 'devise', '~> 4.1'
 
+gem 'easy-emoji'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
