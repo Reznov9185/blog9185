@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require rails_emoji_picker
 //= require turbolinks
 //= require ckeditor/init
 //= require easy-emoji
