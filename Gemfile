@@ -32,9 +32,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip'
 
-# Device for user auth
-gem 'devise', '~> 4.1'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
