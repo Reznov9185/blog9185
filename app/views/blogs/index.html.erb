@@ -1,36 +1,23 @@
-<%- model_class = Blog -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h3>
+    <%= image_tag("http://graph.facebook.com/1581004217/picture", :alt => "profile_image") %>
+    Reznov9185
+  </h3>
 </div>
+<div class="container">
+  <blockquote>
+    <h4>A mere homo sapiens with a paradoxical soul driven by quantum events.</h4>
+    <footer>Sajidur Rahman(reznov9185)</footer>
+  </blockquote>
+</div>
+<%- model_class = Blog -%>
 <table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-        <td><%= link_to blog.id, blog_path(blog) %></td>
-        <td><%= blog.title %></td>
-        <td><%=l blog.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_blog_path(blog), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      blog_path(blog),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
+        <td><h5><%= blog.title %></h5></td>
+        <td><h5><%= truncate(blog.text, :length => 150) %></h5></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_blog_path,
-            :class => 'btn btn-primary' %>

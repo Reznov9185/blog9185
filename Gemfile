@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use mysql2 as the database for Active Record
-# gem 'mysql2', '~> 0.4.4'
+gem 'mysql2', '~> 0.4.4', group: :development
 gem 'pg', '0.18.4'
+# Github page gem
+gem 'github-pages', group: :jekyll_plugins
 # Heroku gem
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
@@ -37,6 +39,9 @@ gem 'paperclip'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+
+# Use devise as auth gem
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
